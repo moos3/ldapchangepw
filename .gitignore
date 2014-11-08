@@ -1,0 +1,19 @@
+syntax: glob
+*.orig
+*.log
+*.pid
+*.rej
+*~
+*.bak
+*.marks
+*.o
+*.pyc
+*.swp
+*.egg-info
+build
+dist
+pip-log.txt
+docs/*/build
+
+syntax: regexp
+.*\#.*\#$

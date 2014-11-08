@@ -1,0 +1,18 @@
+ldap:
+  host: localhost
+  port: 389
+  basedn:
+  search_filter: (objectClass=*)
+  login_field: uid
+  ldaps: False
+  pw_method: md5
+mail:
+  smtp_host: localhost
+  port: 25
+  server_email: server-error@example.com
+logging:
+  debug: True
+  log_file: none
+  backup_size: 1024*1024
+  backup_count: 5
+secret_key: SECRET
