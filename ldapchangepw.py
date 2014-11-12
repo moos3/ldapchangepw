@@ -171,9 +171,11 @@ def index():
                     # login (Bind) user
                     g.ldap.simple_bind_s(user_dn, request.form['oldpassword'])
                     # Change PW
-                    result_code, result = g.ldap.passwd_s(user_dn, None, request.form['password'])
-                    if result_code == ldap.RES_EXTENDED:
+                    try:
+                        g.ldap.passwd_s(user_dn, request.form['oldpassword'], request.form['password'])
                         changed=True
+                    except g.ldap.UNWILLING_TO_PREFORM:
+                        changed=False
 
                 except ldap.LDAPError,e:
                     if isinstance(e, ldap.INVALID_CREDENTIALS):

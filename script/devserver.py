@@ -15,7 +15,7 @@ def devserver():
             required=False, help="The settings file")
 
     parser.add_argument('--host', default='127.0.0.1', help="The host IP to bind to")
-    parser.add_argument('--port', type=int, default=5000, help="The port number to bind to")
+    parser.add_argument('--port', type=int, default=5050, help="The port number to bind to")
     parser.add_argument('--debug', action='store_true', default=False, help="Start in debug mode")
 
     args = parser.parse_args()
