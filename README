@@ -8,3 +8,5 @@ LDAP パスワード変更アプリ
 LDAP の PW を変更できます。
 
 以上
+
+Brought it over from Bitbucket and localized it for english and added some features.
